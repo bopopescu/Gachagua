@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+{#    {% if sending_mail %}#}
+    <title>Students</title>
+{#    {% endif %}#}
+</head>
+<body>
+
+      <form action = "/result" method = "POST">
+         <p>Name <input type = "text" name = "name" /></p>
+         <p>Email <input type = "text" name = "email" /></p>
+         <p>Physics <input type = "text" name = "Physics" /></p>
+         <p>Chemistry <input type = "text" name = "chemistry" /></p>
+         <p>Maths <input type ="text" name = "Mathematics" /></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+{#    {% endfor %}#}
+</body>
+</html>

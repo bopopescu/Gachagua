@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+   <body>
+   <table class="table" id="example">
+        <thead>
+         <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Product</th>
+                <th>Location</th>
+{#                <th>Role</th>#}
+            </tr>
+        </thead>
+           <tbody>
+             {% for user in users %}
+                <tr>
+                    <td>{{ gachagua[0] }}</td>
+                    <td>{{ gachagua[1] }}</td>
+                    <td>{{ gachagua[2] }}</td>
+                    <td>{{ gachagua[3] }}</td>
+                    <td>{{ gachagua[4] }}</td>
+                    <td>{{ gachagua[5] }}</td>
+                </tr>
+            {% endfor %}
+           </tbody>
+
+        </table>
+</body>
+</html>

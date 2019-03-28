@@ -44,20 +44,13 @@ def order():
 
         print(name, email, phone, product, quantity, location)
         cursor = db.cursor()
-        sql = "INSERT INTO `gachagua`(`name`, `email`, `phone`, `product`, `quantity`, `location`, `id`) VALUES (%s,%s,%s,%s,%s,%s)"
+        sql = "INSERT INTO `gachagua`(`name`, `email`, `phone`, `product`, `quantity`, `location`) VALUES (%s,%s,%s,%s,%s,%s)"
         val = (name, email, phone, quantity, product, location)
         cursor.execute(sql, val)
         db.commit()
         flash("saved in database")
-        if sql:
-            email = request.form['email']
-            msg = Message(subject='Order received', sender='earvinbaraka@gmail.com',
-                          recipients=[request.form['email']])
-            # link = url_for('conf_email', token=token, page=page, _external=True)
-            msg.body = render_template('result.html', result=result)
-            mail.send(msg)
-        return redirect(url_for('order'))
-    return render_template('students.html', form=form)
+        # redirect(url_for('result'))
+    return render_template('order.html', form=form)
 
 
 @app.route('/result', methods=['POST', 'GET'])
@@ -65,10 +58,9 @@ def result():
     if request.method == 'POST':
         result = request.form
         page = render_template('result.html', result=result)
-        msg = Message(subject='Order received', html=page, sender='earvinbaraka@gmail.com',
-                      recipients=[request.form['email']])
+        msg = Message(subject='Order received', html=page, sender='earvinbaraka@gmail.com', recipients=[request.form['email']])
         mail.send(msg)
-    return render_template("result.html", result=result)
+    return render_template('result.html',result=result)
 
 
 if __name__ == '__main__':

@@ -1,0 +1,169 @@
+.home-about-area {
+  background: #f9f9ff;
+}
+
+.home-about-area .home-about-left h1 {
+  margin-bottom: 30px;
+}
+
+.home-about-area .home-about-left h6 {
+  color: #038AD4;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.home-about-area .home-about-left .sub {
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.home-about-area .home-about-left .primary-btn {
+  text-transform: capitalize !important;
+  background-color: #3CD0B4; /*fab700*/
+  color: #fff;
+  border: 1px solid transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border-radius: 0;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.home-about-area .home-about-left .primary-btn:hover {
+  background: transparent;
+  color: #fab700;
+  border-color: #fab700;
+}
+
+@media (max-width: 960px) {
+  .home-about-area .home-about-left {
+    margin-bottom: 50px;
+  }
+}
+
+.home-about-area .home-about-right {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/form-bg.jpg);
+  background-size: cover;
+}
+
+.home-about-area .home-about-right .form-wrap {
+  padding: 30px;
+  z-index: 2;
+}
+
+.home-about-area .home-about-right .form-control {
+  background: transparent;
+  z-index: 2;
+  border-radius: 0;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #fff !important;
+}
+
+.home-about-area .home-about-right ::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1;
+  /* Firefox */
+}
+
+.home-about-area .home-about-right :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.home-about-area .home-about-right ::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #fff;
+}
+
+.home-about-area .home-about-right .primary-btn {
+  border-radius: 0;
+  display: inline-block;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.home-about-area .home-about-right .nice-select {
+  background: transparent;
+  border: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.home-about-area .home-about-right .nice-select .current {
+  margin-left: -35px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.home-about-area .home-about-right .form-select .nice-select .list .option {
+  padding-left: 20px;
+}
+.form-select {
+  height: 40px;
+  width: 100%;
+}
+
+.form-select .nice-select {
+  border: none;
+  border-radius: 0px;
+  height: 40px;
+  background: #f9f9ff;
+  padding-left: 45px;
+  padding-right: 40px;
+  width: 100%;
+}
+
+.form-select .nice-select .list {
+  margin-top: 0;
+  border: none;
+  border-radius: 0px;
+  box-shadow: none;
+  width: 100%;
+  padding: 10px 0 10px 0px;
+}
+.form-select primary-btn
+{
+  color: #038AD4;
+}
+.form-select .nice-select .list .option {
+  font-weight: 300;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  line-height: 28px;
+  min-height: 28px;
+  font-size: 12px;
+  padding-left: 45px;
+}
+
+.form-select .nice-select .list .option.selected {
+  color: #038AD4; /*fab700*/
+  background: transparent;
+}
+
+.form-select .nice-select .list .option:hover {
+  color: #038AD4; /*fab700*/
+  background: transparent;
+}
+
+.form-select .current {
+  margin-right: 50px;
+  font-weight: 300;
+}
+
+.form-select .nice-select::after {
+  right: 20px;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.pb-20 {
+  padding-bottom: 20px;
+}

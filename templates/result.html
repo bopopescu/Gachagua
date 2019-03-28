@@ -1,30 +1,31 @@
 <!doctype html>
 <html>
-   <body>
-   <table class="table" id="example">
-        <thead>
-         <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Product</th>
-                <th>Location</th>
-{#                <th>Role</th>#}
-            </tr>
-        </thead>
-           <tbody>
-             {% for user in users %}
-                <tr>
-                    <td>{{ gachagua[0] }}</td>
-                    <td>{{ gachagua[1] }}</td>
-                    <td>{{ gachagua[2] }}</td>
-                    <td>{{ gachagua[3] }}</td>
-                    <td>{{ gachagua[4] }}</td>
-                    <td>{{ gachagua[5] }}</td>
-                </tr>
-            {% endfor %}
-           </tbody>
+<head>
+<title>results</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        </table>
-</body>
+</head>
+   <body>
+   <div class="container justify-content-center">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <h3 align="center">Dear {{request.form['email']  }},<br>
+                    Here's what you ordered</h3>
+            </div>
+            <div class="card-body">
+      <table class="table" border = 1>
+      <tbody>
+         {% for key, value in result.items() %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> {{ value }} </td>
+            </tr>
+         {% endfor %}
+      </tbody>
+      </table>
+            </div>
+        </div>
+    </div>
+   </div>
+   </body>
 </html>

@@ -1,31 +1,57 @@
 <!doctype html>
 <html>
 <head>
-<title>results</title><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>results</title>
+{#    <link rel="stylesheet" href="../static/css/result.css">#}
+    <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/result.css') }}" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
-   <body>
-   <div class="container justify-content-center">
+<body>
+<div class="container justify-content-center">
     <div class="col-12">
         <div class="card">
             <div class="card-header">
-                <h3 align="center">Dear {{request.form['email']  }},<br>
+                <h3 align="center">Dear {{ request.form['email'] }},<br>
                     Here's what you ordered</h3>
             </div>
             <div class="card-body">
-      <table class="table" border = 1>
-      <tbody>
-         {% for key, value in result.items() %}
-            <tr>
-               <th> {{ key }} </th>
-               <td> {{ value }} </td>
-            </tr>
-         {% endfor %}
-      </tbody>
-      </table>
+                <table class="table" border=1>
+                    <tbody>
+{#                             {% for key, value in result.items() %}#}
+                    <tr>
+                        <th> Name </th>
+                        <td> {{ request.form['name'] }} </td>
+                    </tr>
+                    <tr>
+                        <th> Email </th>
+                        <td> {{ request.form['email'] }} </td>
+                    </tr>
+                    <tr>
+                        <th> Phone </th>
+                        <td> {{ request.form['phone'] }} </td>
+                    </tr>
+                    <tr>
+                        <th> Location </th>
+                        <td> {{ request.form['location'] }} </td>
+                    </tr>
+                    <tr>
+                        <th> Product  </th>
+                        <td> {{ request.form['product'] }} </td>
+                    </tr>
+                     <tr>
+                        <th> Quantity </th>
+                        <td> {{ request.form['quantity']}} </td>
+                    </tr>
+{#
+{#                    </tr>#}
+{#                    {% endfor %}#}
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-   </div>
-   </body>
+</div>
+</body>
 </html>

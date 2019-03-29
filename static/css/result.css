@@ -1,0 +1,23 @@
+body
+{
+    background: #0a2b1d!important;
+}
+.container
+{
+    background: #aa7700!important;
+}
+.card-header
+{
+    background: #a367e7!important;
+}
+h3
+{
+    color: white;
+}
+td{
+    color: red;
+}
+th
+{
+    color: rebeccapurple;
+}
